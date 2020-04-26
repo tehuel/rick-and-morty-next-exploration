@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import fetch from 'node-fetch'
 import EpisodeComponent from '../components/episode'
 import HeroComponent from '../components/hero'
+import { getAllEpisodes } from '../lib/episodes'
 
 export default function Home({ episodes }) {
   return (
@@ -40,24 +40,10 @@ export default function Home({ episodes }) {
 
 export async function getStaticProps() {
 
-  const page1 = await fetch("https://rickandmortyapi.com/api/episode?page=1")
-  const page2 = await fetch("https://rickandmortyapi.com/api/episode?page=2")
-
-  const [ res1, res2 ] = await Promise.all([page1, page2]);
-  const [ eps1, eps2 ] = await Promise.all([ res1.json(), res2.json() ])
-
-  const episodes = eps1.results.concat(eps2.results);
+  const episodes = await getAllEpisodes();
   return {
     props: {
-      episodes: episodes.map(ep => {
-        return {
-          name: ep.name,
-          code: ep.episode,
-          season: ep.episode.substr(1,2),
-          air_date: ep.air_date,
-          characters: ep.characters,
-        }
-      }),
+      episodes: episodes,
     }
   }
 }
