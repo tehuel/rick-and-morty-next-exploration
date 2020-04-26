@@ -10,7 +10,7 @@ export default function Episode({ episode }) {
         {
           episode.characters.map(char => {
             return (
-              <li>{ char }</li>
+              <li key={ char }>{ char }</li>
             )
           })
         }

@@ -16,7 +16,7 @@ export default function Home({ episodes }) {
           <div className="columns is-multiline">
             { episodes.map(ep => {
               return (
-                <div className="column is-half">
+                <div className="column is-half" key={ep.code}>
                   <EpisodeComponent episode={ep} />
                 </div>
               )
