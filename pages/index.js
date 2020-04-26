@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import fetch from 'node-fetch'
 import EpisodeComponent from '../components/episode'
+import HeroComponent from '../components/hero'
 
 export default function Home({ episodes }) {
   return (
@@ -8,12 +9,7 @@ export default function Home({ episodes }) {
       <Head>
         <title>Rick And Morty - Next.js Exploration</title>
       </Head>
-      <section className="hero is-medium is-light">
-        <div className="hero-body">
-          <h1 className="title">Rick And Morty</h1>
-          <p className="subtitle has-text-grey">A Next.js framework exploration.</p>
-        </div>
-      </section>
+      <HeroComponent/>
       <section className="section is-medium">
         <div className="container">
           <h1 className="title is-3">Episodes</h1>
