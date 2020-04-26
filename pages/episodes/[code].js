@@ -1,4 +1,5 @@
 import { getAllEpisodes } from '../../lib/episodes'
+import Link from 'next/link'
 
 export default function Episode({ episode }) {
   return (
@@ -14,6 +15,11 @@ export default function Episode({ episode }) {
           })
         }
       </ul>
+      <p>
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+      </p>
     </section>
   )
 }
