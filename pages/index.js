@@ -4,15 +4,41 @@ import EpisodeComponent from '../components/episode'
 
 export default function Home({ episodes }) {
   return (
-    <div className="container">
+    <>
       <Head>
         <title>Rick And Morty - Next.js Exploration</title>
       </Head>
-      <p>Episodes</p>
-      { episodes.map(ep =>
-        <EpisodeComponent episode={ep} />
-      ) }
-    </div>
+      <section className="hero is-medium is-light">
+        <div className="hero-body">
+          <h1 className="title">Rick And Morty</h1>
+          <p className="subtitle has-text-grey">A Next.js framework exploration.</p>
+        </div>
+      </section>
+      <section className="section is-medium">
+        <div className="container">
+          <h1 className="title is-3">Episodes</h1>
+          <div className="columns is-multiline">
+            { episodes.map(ep => {
+              return (
+                <div className="column is-half">
+                  <EpisodeComponent episode={ep} />
+                </div>
+              )
+            }) }
+          </div>
+        </div>
+      </section>
+      <footer className="footer">
+        <div className="content has-text-centered">
+          <p>
+            <strong>rick-and-morty-next-exploration</strong> by <a href="https://tehuel.blog">Tehuel</a>
+          </p>
+          <p>
+            view source code | data from <a href="https://rickandmortyapi.com/">rickandmortyapi.com</a> | comments?
+          </p>
+        </div>
+      </footer>
+    </>
   )
 }
 
