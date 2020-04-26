@@ -1,6 +1,6 @@
 # rick-and-morty-next-exploration
 
-Project to explore and understand Next.js framework.
+Project to explore and understand Next.js framework. Deployed at [rick-and-morty-next-exploration.now.sh](https://rick-and-morty-next-exploration.now.sh/)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
 
