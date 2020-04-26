@@ -27,10 +27,10 @@ export default function Home({ episodes }) {
       <footer className="footer">
         <div className="content has-text-centered">
           <p>
-            <strong>rick-and-morty-next-exploration</strong> by <a href="https://tehuel.blog">Tehuel</a>
+            <strong>rick-and-morty-next-exploration.now.sh</strong> by <a href="https://tehuel.blog">Tehuel</a>
           </p>
           <p>
-            view source code | data from <a href="https://rickandmortyapi.com/">rickandmortyapi.com</a> | comments?
+            <a href="https://github.com/tehuel/rick-and-morty-next-exploration">source code</a> | data from <a href="https://rickandmortyapi.com/">rickandmortyapi.com</a> | comments?
           </p>
         </div>
       </footer>
